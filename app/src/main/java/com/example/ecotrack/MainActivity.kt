@@ -10,9 +10,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.ecotrack.ui.theme.EcoTrackTheme
 import com.example.ecotrack.ui.theme.NavGraph
 
+/**
+ * Main Activity - Entry point of the application.
+ */
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             EcoTrackTheme {
                 NavGraph()
@@ -20,14 +25,24 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+/**
+ * Greeting composable used for previews/examples.
+ */
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(
+    name: String,
+    modifier: Modifier = Modifier
+) {
     Text(
         text = "Hello $name!",
         modifier = modifier
     )
 }
 
+/**
+ * Preview for the Greeting composable.
+ */
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
